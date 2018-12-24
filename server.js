@@ -6,7 +6,7 @@ const { mongoose } = require('./DB/connectDb');
 const { User } = require('./DB/Model/User');
 const { ObjectID } = require('mongodb');
 
-
+const port = process.env.PORT || 3030;
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -161,8 +161,8 @@ app.put('/image', (req, res) => {
 })
 
 
-app.listen(3030, () => {
-    console.log("Server started at port 3030");
+app.listen(port, () => {
+    console.log(`Server started at port ${port}`);
 });
 
 
