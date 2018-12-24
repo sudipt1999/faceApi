@@ -79,6 +79,8 @@ app.post('/signUp', (req, res) => {
             user: user,
             status: "success"
         });
+    }).catch(e => {
+        console.log(e);
     })
 
 })
